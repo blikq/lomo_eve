@@ -13,6 +13,7 @@ limiter = Limiter(
     get_remote_address,
     app=app,
     default_limits=["100 per day", "5 per minute"],  # Global limits
+    storage_uri="memory://",
 )
 
 # Apply a limit to the users POST endpoint (e.g., 5 requests per minute)
