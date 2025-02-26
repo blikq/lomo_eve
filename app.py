@@ -12,7 +12,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 limiter = Limiter(
     get_remote_address,
     app=app,
-    default_limits=["100 per day", "5 per minute"],  # Global limits
+    default_limits=["5 per day", "5 per minute"],  # Global limits
     storage_uri="memory://",
 )
 
