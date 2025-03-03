@@ -28,6 +28,9 @@ schema = {
         'required': False,
     },
     'email': {
+        # Validator
+        'isemail': True,
+        
         'type': 'string',
         'minlength': 1,
         'maxlength': 60,

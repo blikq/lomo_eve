@@ -2,8 +2,9 @@ from eve import Eve
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_cors import CORS, cross_origin
+from validators import MyValidator
 
-app = Eve()
+app = Eve(validator=MyValidator)
 
 cors = CORS(app) # allow CORS for all domains on all routes.
 app.config['CORS_HEADERS'] = 'Content-Type'
