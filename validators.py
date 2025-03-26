@@ -2,6 +2,11 @@ from eve.io.mongo import Validator
 from email_validator import validate_email, EmailNotValidError
 
 class MyValidator(Validator):
+    # Define rules schema for custom validators
+    rules = {
+        'isemail': {'type': 'boolean'}
+    }
+
     def _validate_isemail(self, isemail, field, value):
         if isemail:
             try:
